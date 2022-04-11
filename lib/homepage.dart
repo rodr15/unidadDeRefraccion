@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -8,6 +9,17 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  
+
+  @override
+  initState() {
+    super.initState();
+
+    
+  }
+
+
   /* Variables de los botones */
   bool lamparaState = false;
   bool aux1State = false;
@@ -25,7 +37,9 @@ class _HomePageState extends State<HomePage> {
       onPressed: () {
         setState(() {
           lamparaState = !lamparaState;
+          
         });
+     
       },
     );
     FloatingActionButton Aux1 = FloatingActionButton(
@@ -100,7 +114,11 @@ class _HomePageState extends State<HomePage> {
         body: Stack(children: [
           Center(
             child: Container(
-                color: Colors.blue, width: sw - 20, height: sh - 1.5 * sh / 10),
+              color: Colors.blue,
+              width: sw - 20,
+              height: sh - 1.5 * sh / 10,
+              
+            ),
           ),
           if (sillaState) botonesSilla
         ]),
